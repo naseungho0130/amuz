@@ -9,7 +9,6 @@
         .container {
             margin: 0 auto;
             width: 80%;
-            font-style: Arial, sans-serif;
             border: 1px solid #000;
         }
 
@@ -62,6 +61,7 @@
         #prevpage, #nextpage, .pagenumber {
             text-decoration: none;
             color: #333;
+            display: none;
         }
 
     </style>
@@ -70,7 +70,7 @@
     <div class="container">
         <div class="head">
             <p>Notice</p>
-            <a href="#" id="writelink">글쓰기</a>
+            <a href="{{route('create')}}" id="writelink">글쓰기</a>
         </div>
         <table>
             <tr>
@@ -90,5 +90,5 @@
             <a href="#" id="nextpage">-></a>
         </div>
     </div>
-    </body>
+</body>
 </html>
