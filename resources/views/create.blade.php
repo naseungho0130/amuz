@@ -75,18 +75,21 @@
         <div class="titlebox">
             <p>Notice</p>
         </div>
-        <div class="contents">
-            <h3>title</h3>
-            <input type="text" name="title" id="title"><br>
-            <h3>writer</h3>
-            <input type="text" name="writer" id="writer"><br>
-            <h3>password</h3>
-            <input type="password" name="password" id="password"><br>
-            <h3>content</h3>
-            <input type="text" name="content" id="content"><br>
-        </div>
-        <input type="submit" id="savebutton" value="저장">
-        <input type="button" id="cancelbutton" value="취소">
+        <form action="{{route('write')}} "method='POST'>
+            @csrf
+            <div class="contents">
+                <h3>title</h3>
+                <input type="text" name="title" id="title"><br>
+                <h3>writer</h3>
+                <input type="text" name="writer" id="writer"><br>
+                <h3>password</h3>
+                <input type="password" name="password" id="password"><br>
+                <h3>content</h3>
+                <input type="text" name="content" id="content"><br>
+            </div>
+            <input type="submit" id="savebutton" value="저장">
+            <input type="button" id="cancelbutton" value="취소">
+        </form>
     </div>
 
     <script>

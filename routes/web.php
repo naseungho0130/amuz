@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\notice_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[ notice_Controller::class, 'index'])->name('index');
 Route::get('/list', function () {
     return view('list');
-});
+})->name('list');
 Route::get('/create', function () {
     return view('create');
 })->name('create');
+Route::post('/createPost',[ notice_Controller::class, 'write'])->name('write');
