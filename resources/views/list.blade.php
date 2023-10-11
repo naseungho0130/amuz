@@ -38,6 +38,10 @@
             text-align: center;
         }
 
+        #writelink:hover {
+            background-color: #fdee70;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;

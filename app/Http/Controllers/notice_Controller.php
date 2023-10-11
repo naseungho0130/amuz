@@ -11,6 +11,9 @@ class notice_Controller extends Controller
         return view('welcome');
     }
     public function write(){
-        return 'test';
+        return 'list';
+    }
+    public function store(){
+        
     }
 }
