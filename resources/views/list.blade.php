@@ -77,12 +77,24 @@
             <a href="{{route('create')}}" id="writelink">글쓰기</a>
         </div>
         <table>
-            <tr>
-                <td>No.</td>
-                <td>제목</td>
-                <td>작성자</td>
-                <td>작성 날짜</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성 날짜</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($posts as $post)
+                    <tr>
+                        <td>{{$post->id}}</td>
+                        <td>{{$post->title}}</td>
+                        <td>{{$post->writer}}</td>
+                        <td>{{$post->created_at}}</td>
+                    </tr>
+                @endforeach
+            </tbody>
         </table>
         <div class="paging">
             <a href="#" id="prevpage"><-</a>
