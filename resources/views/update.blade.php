@@ -42,8 +42,7 @@
         }
 
 
-        input[type="text"],
-        input[type="password"] {
+        input[type="text"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
@@ -82,13 +81,11 @@
                 <input type="text" name="title" id="title"><br>
                 <h3>writer</h3>
                 <input type="text" name="writer" id="writer"><br>
-                <h3>password</h3>
-                <input type="password" name="password" id="password"><br>
                 <h3>content</h3>
                 <input type="text" name="content" id="content"><br>
             </div>
-            <input type="submit" id="savebutton" value="저장">
-            <input type="button" id="cancelbutton" value="취소">
+            <input type="submit" id="savebutton" value="수정">
+            <input type="button" id="cancelbutton" value="삭제">
         </form>
     </div>
 </body>

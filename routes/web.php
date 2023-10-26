@@ -21,3 +21,6 @@ Route::get('/create', function () {
 })->name('create');
 Route::post('/createPost',[ notice_Controller::class, 'write'])->name('write');
 
+Route::get('/update',function (){
+    return view('update');
+});
