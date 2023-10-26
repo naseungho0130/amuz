@@ -48,11 +48,11 @@
             margin-top: 20px;
         }
 
-        table, th, td {
+        table, tr, th {
             border: 1px solid #ccc;
         }
 
-        th, td {
+        tr, th {
             padding: 10px;
             text-align: center;
         }
@@ -86,7 +86,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($posts as $post)
+                @foreach ($posts as $key => $post)
                     <tr>
                         <td>{{$post->id}}</td>
                         <td>{{$post->title}}</td>

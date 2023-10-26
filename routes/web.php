@@ -14,11 +14,10 @@ use App\Http\Controllers\notice_Controller;
 |
 */
 
-Route::get('/',[ notice_Controller::class, 'index'])->name('index');
-Route::get('/list', function () {
-    return view('list');
-})->name('list');
+Route::get('/',[ notice_Controller::class, 'index'])->name('list');
+
 Route::get('/create', function () {
     return view('create');
 })->name('create');
 Route::post('/createPost',[ notice_Controller::class, 'write'])->name('write');
+
