@@ -87,8 +87,6 @@
                 <h3>content</h3>
                 <input type="text" name="content" id="content"><br>
             </div>
-            <input type="submit" id="savebutton" value="수정">
-            <input type="button" id="cancelbutton" value="삭제">
         </form>
     </div>
 </body>

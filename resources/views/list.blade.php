@@ -65,7 +65,9 @@
         #prevpage, #nextpage, .pagenumber {
             text-decoration: none;
             color: #333;
-            display: none;
+            font-size: 25px;
+            padding: 10px;
+            /* display: none; */
         }
 
     </style>
@@ -89,7 +91,7 @@
                 @foreach ($posts as $key => $post)
                     <tr>
                         <td>{{$post->id}}</td>
-                        <td>{{$post->title}}</td>
+                        <td><a href="{{route("read")}}">{{$post->title}}</a></td>
                         <td>{{$post->writer}}</td>
                         <td>{{$post->created_at}}</td>
                     </tr>
