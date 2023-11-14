@@ -23,8 +23,8 @@ Route::post('/createPost',[ notice_Controller::class, 'write'])->name('write');
 
 Route::get('/read', function(){
     return view('read');
-});
+})->name('read');
 
 Route::get('/update',function (){
     return view('update');
-});
+})->name('update');

@@ -75,7 +75,7 @@
         <div class="titlebox">
             <p>Notice</p>
         </div>
-        <form action="{{route('write')}} "method='POST'>
+        <form action="{{route('write')}}" method='POST'>
             @csrf
             <div class="contents">
                 <h3>title</h3>
@@ -87,6 +87,7 @@
                 <h3>content</h3>
                 <input type="text" name="content" id="content"><br>
             </div>
+            <input type="submit" value="나가기">
         </form>
     </div>
 </body>

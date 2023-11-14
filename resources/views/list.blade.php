@@ -6,10 +6,17 @@
     <title>Document</title>
     <style>
 
+        *{
+            text-decoration: none;
+            list-style: none;
+            color: black;
+            box-sizing: border-box;
+        }
+
         .container {
             margin: 0 auto;
             width: 80%;
-            border: 1px solid #000;
+            border: 1px solid lightgray;
         }
 
         .head {
@@ -67,7 +74,7 @@
             color: #333;
             font-size: 25px;
             padding: 10px;
-            /* display: none; */
+            display: none;
         }
 
     </style>
@@ -91,7 +98,7 @@
                 @foreach ($posts as $key => $post)
                     <tr>
                         <td>{{$post->id}}</td>
-                        <td><a href="{{route("read")}}">{{$post->title}}</a></td>
+                        <td><a href="{{route('read')}}">{{$post->title}}</a></td>
                         <td>{{$post->writer}}</td>
                         <td>{{$post->created_at}}</td>
                     </tr>
