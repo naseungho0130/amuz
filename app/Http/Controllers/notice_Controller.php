@@ -15,6 +15,16 @@ class notice_Controller extends Controller
         return view('list',compact("posts"));
     }
 
+    public function post() {
+        $posts = DB::table('post')->get();
+        return view('posts',compact("read"));
+    }
+
+    public function update() {
+        $posts = DB::table('post')->get();
+        return view('posts',compact("update"));
+    }
+
     public function write(Request $request){
         DB::table('post')->insert([
             'title' => $request->title,

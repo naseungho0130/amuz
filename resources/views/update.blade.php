@@ -75,7 +75,7 @@
         <div class="titlebox">
             <p>Notice</p>
         </div>
-        <form action="{{route('write')}} "method='POST'>
+        <form action="{{route('update')}} "method='POST'>
             @csrf
             <div class="contents">
                 <h3>title</h3>
