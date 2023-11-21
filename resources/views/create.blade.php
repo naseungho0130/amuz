@@ -51,8 +51,7 @@
             border-radius: 4px;
         }
 
-        input[type="submit"],
-        input[type="button"] {
+        input[type="submit"] {
             background-color: #333;
             color: #fff;
             padding: 10px 20px;
@@ -63,8 +62,7 @@
             margin-bottom: 20px;
         }
 
-        input[type="submit"]:hover,
-        input[type="button"]:hover {
+        input[type="submit"]:hover {
             background-color: #555;
         }
 
@@ -88,7 +86,6 @@
                 <input type="text" name="content" id="content"><br>
             </div>
             <input type="submit" id="savebutton" value="저장">
-            <input type="button" id="cancelbutton" value="취소">
         </form>
     </div>
 </body>

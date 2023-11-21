@@ -115,5 +115,6 @@
             <a href="#" id="nextpage">-></a>
         </div>
     </div>
+    {{ $posts->links() }}
 </body>
 </html>
