@@ -75,19 +75,19 @@
         <div class="titlebox">
             <p>Notice</p>
         </div>
-        <form action="{{route('read')}}" method='POST'>
             @csrf
             <div class="contents">
                 <h3>title</h3>
-                <input type="text" name="title" id="title"><br>
+                <input type="text" name="title" id="title" value="{{$post->id}}"><br>
                 <h3>writer</h3>
-                <input type="text" name="writer" id="writer"><br>
+                <input type="text" name="writer" id="writer" value="{{$post->id}}"><br>
                 <h3>password</h3>
-                <input type="password" name="password" id="password"><br>
+                <input type="password" name="password" id="password" value="{{$post->id}}"><br>
                 <h3>content</h3>
-                <input type="text" name="content" id="content"><br>
+                <input type="text" name="content" id="content" value="{{$post->id}}"><br>
             </div>
-            <input type="submit" value="나가기">
+            <input type="submit" id="savebutton" value="수정">
+            <input type="button" id="cancelbutton" value="삭제">
         </form>
     </div>
 </body>

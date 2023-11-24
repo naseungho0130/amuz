@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
 
         *{
@@ -64,6 +65,11 @@
             text-align: center;
         }
 
+        tbody, tr, td {
+            color: black;
+            text-decoration: none;
+        }
+
         .paging {
             margin-top: 20px;
             text-align: center;
@@ -98,8 +104,8 @@
                 @foreach ($posts as $key => $post)
                     <tr>
                         <td>{{$post->id}}</td>
-                        <td><a href="{{route('read')}}">{{$post->title}}</a></td>
-                        <td><a href="{{route('update')}}">{{$post->writer}}</a></td>
+                        <td><a href="{{route('read',$post->id)}}">{{$post->title}}</a></td>
+                        <td>{{$post->writer}}</td>
                         <td>{{$post->created_at}}</td>
                     </tr>
                 @endforeach

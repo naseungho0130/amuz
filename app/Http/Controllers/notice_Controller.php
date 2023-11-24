@@ -11,18 +11,14 @@ class notice_Controller extends Controller
 
 {
     public function index() {
-        $posts = DB::table('post')->orderByDesc('id')->paginate(10);
+        $posts = DB::table('post')->orderByDesc('id')->paginate(5);
         return view('list',compact("posts"));
     }
 
-    public function read() {
-        $posts = DB::table('post')->get();
-        return view('read',compact("posts"));
-    }
-
-    public function update() {
-        $posts = DB::table('post')->get();
-        return view('update',compact("posts"));
+    public function read(Request $request) {
+        $id = $request->id;
+        $post = DB::table('post')->where('id',$id)->first();
+        return view('read',compact("post"));
     }
 
     public function write(Request $request){
