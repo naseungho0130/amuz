@@ -21,5 +21,6 @@ Route::get('/create', function () {
 })->name('create');
 Route::post('/createPost',[ notice_Controller::class, 'write'])->name('write');
 
-
 Route::get('/Post/{id}',[notice_Controller::class, 'read'])->name('read');
+
+Route::get('/update/{id}',[notice_Controller::class, 'update'])->name('update');

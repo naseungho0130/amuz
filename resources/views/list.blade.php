@@ -105,7 +105,7 @@
                     <tr>
                         <td>{{$post->id}}</td>
                         <td><a href="{{route('read',$post->id)}}">{{$post->title}}</a></td>
-                        <td>{{$post->writer}}</td>
+                        <td><a href="{{route('update',$post->id)}}">{{$post->writer}}</a></td>
                         <td>{{$post->created_at}}</td>
                     </tr>
                 @endforeach

@@ -21,6 +21,12 @@ class notice_Controller extends Controller
         return view('read',compact("post"));
     }
 
+    public function update(Request $request) {
+        $id = $request->id;
+        $post = DB::table('post')->where('id',$id)->first();
+        return view('update',compact("post"));
+    }
+
     public function write(Request $request){
         DB::table('post')->insert([
             'title' => $request->title,
