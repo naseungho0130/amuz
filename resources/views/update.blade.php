@@ -84,7 +84,7 @@
     </style>
 </head>
 <body>
-    <form action="{{route('write')}}" method="POST">
+    <form action="{{route('update')}}" method="POST">
         <div class="container">
             <div class="titlebox">
                 <p>Notice</p>
