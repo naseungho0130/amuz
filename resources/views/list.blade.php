@@ -16,8 +16,8 @@
 
         .container {
             margin: 0 auto;
+            padding: 10px;  
             width: 80%;
-            border: 1px solid lightgray;
         }
 
         .head {
@@ -111,15 +111,6 @@
                 @endforeach
             </tbody>
         </table>
-        <div class="paging">
-            <a href="#" id="prevpage"><-</a>
-            <a href="#" class="pagenumber">1</a>
-            <a href="#" class="pagenumber">2</a>
-            <a href="#" class="pagenumber">3</a>
-            <a href="#" class="pagenumber">4</a>
-            <a href="#" class="pagenumber">5</a>
-            <a href="#" id="nextpage">-></a>
-        </div>
     </div>
     {{ $posts->links() }}
 </body>
