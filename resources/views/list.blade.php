@@ -121,7 +121,6 @@
             <a href="#" id="nextpage">-></a>
         </div>
     </div>
-    {{-- 페이지네이션 링크 페이지네이션 깨짐 수정 수행하는 중 --}}
     {{ $posts->links() }}
 </body>
 </html>
