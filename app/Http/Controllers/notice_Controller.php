@@ -21,20 +21,24 @@ class notice_Controller extends Controller
         return view('read',compact("post"));
     }
 
-    public function update(Request $request, post $post) {
+    public function updatepost(Request $request) {
         $id = $request->id;
         $post = DB::table('post')->where('id',$id)->first();
         return view('update',compact("post"));
-
-        // 업데이트 테이블 라우트하고 있음 수정이 안되고 계속 create되고 있음//
-        DB::table('post')->update([
+        
+        DB::table('post')->updatepost([
             'title' => $request->title,
             'writer' => $request->writer,
             'password' => $request->password,
             'content' => $request->content
         ]);
-        $post->update($request);
+        
+        $post->updatepost($request);
         return redirect()->route('post.list', $post);
+    }
+
+    public function delete(Request $request){
+        DB::table('post')->where('votes', '>', 1)->delete();
     }
 
     public function write(Request $request){

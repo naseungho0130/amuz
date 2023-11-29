@@ -105,13 +105,15 @@
                     <tr>
                         <td>{{$post->id}}</td>
                         <td><a href="{{route('read',$post->id)}}">{{$post->title}}</a></td>
-                        <td><a href="{{route('update',$post->id)}}">{{$post->writer}}</a></td>
+                        <td><a href="{{route('updatepost',$post->id)}}">{{$post->writer}}</a></td>
                         <td>{{$post->created_at}}</td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
-    {{ $posts->links() }}
+    <div style="width: 450px; margin:auto;">
+        {{ $posts->links() }}
+    </div>
 </body>
 </html>
