@@ -65,7 +65,7 @@
             text-align: center;
         }
 
-        tbody, tr, td {
+        tbody, tr, td, a {
             color: black;
             text-decoration: none;
         }
@@ -112,7 +112,7 @@
             </tbody>
         </table>
     </div>
-    <div style="width: 450px; margin:auto;">
+    <div style="width: 400px; margin:auto; color:black;">
         {{ $posts->links() }}
     </div>
 </body>

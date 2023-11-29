@@ -84,6 +84,7 @@
     </style>
 </head>
 <body>
+    {{-- 작동은 되지만 라우팅이 잘 안됨 --}}
     <form action="{{route('updatepost',$post->id)}}" method="POST">
         <div class="container">
             <div class="titlebox">
