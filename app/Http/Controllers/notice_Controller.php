@@ -14,6 +14,18 @@ class notice_Controller extends Controller
         $posts = DB::table('post')->orderByDesc('id')->paginate(5);
         return view('list',compact("posts"));
     }
+    
+    public function write(Request $request){
+        DB::table('post')->insert([
+            'title' => $request->title,
+            'writer' => $request->writer,
+            'password' => $request->password,
+            'content' => $request->content,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+        return redirect('/');
+    }
 
     public function read(Request $request) {
         $id = $request->id;
@@ -37,19 +49,19 @@ class notice_Controller extends Controller
         return redirect()->route('post.list', $post);
     }
 
-    public function delete(Request $request){
-        DB::table('post')->where('votes', '>', 1)->delete();
+    public function edit(Request $request){
+        DB::table('post')
+              ->where('id', $request->id)
+              ->update([
+                'title' => $request->title,
+                'content' => $request->content
+              ]);
+              return redirect()->route('list');
     }
 
-    public function write(Request $request){
-        DB::table('post')->insert([
-            'title' => $request->title,
-            'writer' => $request->writer,
-            'password' => $request->password,
-            'content' => $request->content,
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now()
-        ]);
-        return redirect('/');
+
+    public function delete(Request $request){
+        DB::table('post')->where('id', $request->id)->delete();
+        return redirect()->route('list');
     }
 }

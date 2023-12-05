@@ -66,26 +66,26 @@
             background-color: #555;
         }
 
-        button {
+        a {
             background-color: #333;
             color: #fff;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
             border-radius: 25px;
-            margin-left: 10px;
+            margin-left: 20px;
             margin-bottom: 20px;
+            text-decoration: none;
         }
-
-        button:hover{
+        
+        a:hover {
             background-color: #555;
         }
 
     </style>
 </head>
 <body>
-    {{-- 작동은 되지만 라우팅이 잘 안됨 --}}
-    <form action="{{route('updatepost',$post->id)}}" method="POST">
+    <form action="{{route('edit',$post->id)}}" method="POST">
         <div class="container">
             <div class="titlebox">
                 <p>Notice</p>
@@ -94,18 +94,15 @@
                 <div class="contents">
                     <h3>title</h3>
                     <input type="text" name="title" id="title" value="{{$post->title}}"><br>
-                    <h3>writer</h3>
-                    <input type="text" name="writer" id="writer" value="{{$post->writer}}"><br>
-                    <h3>password</h3>
-                    <input type="password" name="password" id="password" value="{{$post->password}}"><br>
+            
                     <h3>content</h3>
                     <input type="text" name="content" id="content" value="{{$post->content}}"><br>
                 </div>
                 <input type="submit" id="savebutton" value="수정">
                 
-                <button>
+                <a href="{{route('delete',$post->id)}}">
                     삭제
-                </button>
+                </a>
             </div>
     </form>
 </body>

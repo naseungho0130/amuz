@@ -25,4 +25,6 @@ Route::get('/Post/{id}',[notice_Controller::class, 'read'])->name('read');
 
 Route::get('/updatepost/{id}',[notice_Controller::class, 'updatepost'])->name('updatepost');
 
-Route::post('/updatepost/{id}',[notice_Controller::class, 'updatepost'])->name('updatepost');
+Route::post('/updatepost/{id}',[notice_Controller::class, 'edit'])->name('edit');
+
+Route::get('/delete/{id}',[notice_Controller::class, 'delete'])->name('delete');
