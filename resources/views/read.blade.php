@@ -7,10 +7,11 @@
     <title>Document</title>
     <style>
         * {
-            box-sizing: border-box
+            box-sizing: border-box;
         }
         .container {
             width: 80%;
+            height: 450px;
             margin: 0 auto;
             border: 1px solid #ddd;
         }
@@ -31,6 +32,14 @@
             margin-left: 10px;
         }
 
+        .cont1,
+        .cont2,
+        .cont3 {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid lightgray;
+        }
+
         .contents {
             margin-top: 20px;
         }
@@ -41,30 +50,17 @@
             margin-bottom: 50px;
         }
 
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        input[type="submit"],
-        input[type="button"] {
+        a {
             background-color: #333;
             color: #fff;
             padding: 10px 20px;
-            border: none;
-            cursor: pointer;
             border-radius: 25px;
-            margin-left: 20px;
-            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
         }
-
-        input[type="submit"]:hover,
-        input[type="button"]:hover {
+        
+        a:hover {
             background-color: #555;
         }
 
@@ -78,13 +74,13 @@
             @csrf
             <div class="contents">
                 <h3>title</h3>
-                <input type="text" name="title" id="title" value="{{$post->title}}"><br>
+                <p class="cont1">{{$post->title}}</p><br>
                 <h3>writer</h3>
-                <input type="text" name="writer" id="writer" value="{{$post->writer}}"><br>
+                <p class="cont2">{{$post->writer}}</p><br>
                 <h3>content</h3>
-                <input type="text" name="content" id="content" value="{{$post->content}}"><br>
+                <p class="cont3">{{$post->content}}</p><br>
             </div>
-            <input type="submit" id="savebutton" value="나가기">
+            <a href="{{route('list')}}">나가기</a>
         </form>
     </div>
 </body>
