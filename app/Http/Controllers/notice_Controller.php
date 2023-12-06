@@ -11,7 +11,8 @@ class notice_Controller extends Controller
 
 {
     public function index() {
-        $posts = DB::table('post')->orderByDesc('id')->paginate(5);
+        $posts = DB::table('post')->paginate(5);
+
         return view('list',compact("posts"));
     }
     

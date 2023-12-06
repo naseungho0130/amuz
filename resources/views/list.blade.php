@@ -86,8 +86,10 @@
     </style>
 </head>
 <body>
+    
     <div class="container">
         <div class="head">
+
             <p>Notice</p>
             <a href="{{route('create')}}" id="writelink">글쓰기</a>
         </div>
@@ -103,7 +105,7 @@
             <tbody>
                 @foreach ($posts as $key => $post)
                     <tr>
-                        <td>{{$post->id}}</td>
+                        <td>{{$key+1+($posts->currentPage()-1)*5}}</td>
                         <td><a href="{{route('read',$post->id)}}">{{$post->title}}</a></td>
                         <td><a href="{{route('updatepost',$post->id)}}">{{$post->writer}}</a></td>
                         <td>{{$post->created_at}}</td>
